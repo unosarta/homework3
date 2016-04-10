@@ -21,3 +21,9 @@ def test_isotopes():
 def test_iso_failure():
 
         assert_raises(IndexError, isotopes, ["lol 4 3 2 1", "kek", "5 6 7 8", "hue", "9 10 11 12"], "lol 4 3 2 1", [])
+
+def test_lib():
+
+        obs = elelib_construct('filetotest')
+        exp = {'lol': { 'iso': [('5','1'),('6','2'),('7','3'),('8','4')], 'rho': '3', 'mm': '1', 'Z': '2'}}
+        assert_equal(obs,exp)
