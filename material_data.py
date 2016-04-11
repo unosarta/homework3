@@ -2,9 +2,10 @@ def mass_fraction(l,line,lines):
 
         pos = lines.index(l)
         frac_num =int(line[2])
-        fracs = []
+        fracs = {}
         for i in range(frac_num):
-                fracs.append(lines[pos+1+i].split())
+                j = lines[pos+1+i].split()
+                fracs.update({j[0]: j[1:]})
         return fracs
 
 def mat_data(line):
